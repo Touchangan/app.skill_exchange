@@ -1,0 +1,82 @@
+# Dart/Flutter specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Android specific
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/proguard-rules.pro
+android/key.properties
+*.jks
+
+# iOS specific
+ios/Flutter/Flutter.podspec
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec.json
+ios/ServiceDefinitions.json
+ios/Runner.xcworkspace/
+ios/build/
+
+# Xcode specific
+*.xcworkspace
+*.xcuserstate
+!default.xcworkspace
+
+# macOS specific
+macos/Flutter/ephemeral/
+macos/.symlinks/
+macos/build/
+
+# Web specific
+web/.dart_tool/
+web/.idea/
+web/build/
+
+# Windows specific
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/ephemeral/
+windows/build/
+
+# Linux specific
+linux/flutter/ephemeral/
+linux/build/
+
+# IntelliJ/Android Studio specific
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/modules.xml
+.idea/workspace.xml
+.idea/libraries/
+.idea/vcs.xml
+.idea/.name
+.idea/misc.xml
+.idea/dictionaries/
+.idea/runConfigurations/
+
+# VS Code specific
+.vscode/
+
+# Generated files
+*.log
+*.lock
+*.log.*
+pubspec.lock
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*.DS_Store
+*.bak
+*.orig
