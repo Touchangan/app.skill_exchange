@@ -1,16 +1,98 @@
-# appskill
+# 技能交换与经验分享平台
 
-A new Flutter project.
+## 简介
 
-## Getting Started
+技能交换与经验分享平台是一个社交型应用，用户可以发布技能交换帖子与经验分享帖子，与其他用户进行技能交流与经验分享。平台支持用户注册、登录、管理个人信息，以及通过技能交换构建协作关系。
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 功能列表
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. 用户模块
+- **注册与登录**
+  - 用户可以通过邮箱和密码注册账户。
+  - 登录后可访问个人主页及相关功能。
+- **个人信息管理**
+  - 用户可以查看和编辑个人信息，包括用户名、头像、学校、简介、性别等。
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. 帖子模块
+- **技能交换帖子**
+  - 用户可以发布技能交换帖子，包含文字描述及图片。
+  - 支持查看技能交换帖子的详细信息。
+- **经验分享帖子**
+  - 用户可以发布经验分享帖子，与他人分享个人经验。
+  - 支持查看经验分享帖子的详细信息。
+
+### 3. 交换管理模块
+- **发起技能交换请求**
+  - 用户可基于技能交换帖子向其他用户发起技能交换请求。
+  - 请求状态包括已发送、已接受、已拒绝等。
+- **确认技能交换**
+  - 接收者可以接受或拒绝技能交换请求。
+  - 系统会向双方发送状态更新通知。
+
+### 4. 通知模块
+- 提供实时通知功能，提醒用户：
+  - 收到新的技能交换请求。
+  - 帖子被点赞或收到评论。
+
+### 5. 应用下载页面
+- 提供一个应用下载页面，用户可通过浏览器访问链接下载 Android APK 文件。
+
+---
+
+## 技术栈
+
+### 后端
+- **语言**：Python 3.12
+- **框架**：FastAPI
+- **数据库**：MySQL
+- **依赖**：
+  - SQLAlchemy
+  - Pydantic
+  - PyMySQL
+
+### 前端
+- **框架**：Flutter
+- **语言**：Dart
+- **依赖**：
+  - `http`：用于 API 请求。
+  - `shared_preferences`：用户登录状态本地存储。
+
+### 部署
+- **服务器**：Linux Ubuntu
+- **Web 服务器**：Nginx
+- **应用部署**：Gunicorn + Uvicorn
+
+---
+
+## 安装与运行
+
+### 后端
+1. 克隆项目代码：
+   ```bash
+   git clone https://github.com/your-repo.git
+   cd your-repo
+安装依赖：
+bash
+复制代码
+pip install -r requirements.txt
+数据库迁移：
+bash
+复制代码
+alembic upgrade head
+启动后端服务：
+bash
+复制代码
+uvicorn main:app --reload
+前端
+安装 Flutter 环境，参考官方文档：Flutter 安装指南
+克隆项目代码：
+bash
+复制代码
+git clone https://github.com/your-repo.git
+cd your-repo
+运行应用：
+bash
+复制代码
+flutter run
