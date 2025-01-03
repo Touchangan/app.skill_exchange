@@ -151,10 +151,13 @@ class _SkillPostDetailScreenState extends State<SkillPostDetailScreen> {
     try {
       final response = await http.get(url);
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-        print(data);
-        return List<Map<String, dynamic>>.from(data["comments"]);
+        // 将 body 转换为 UTF-8 编码
+        final utf8Body = utf8.decode(response.bodyBytes);
+        final data = jsonDecode(utf8Body);
+        print("返回数据: $data");
+        return List<Map<String, dynamic>>.from(data); // 或 data["comments"]，根据后端返回结构
       } else {
+        print("错误状态码: ${response.statusCode}");
         return [];
       }
     } catch (e) {
